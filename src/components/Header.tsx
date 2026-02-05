@@ -56,7 +56,7 @@ const Header = ({ scrolled: _scrolledProps }: HeaderProps) => {
             </a>
           ))}
           <a 
-            href="https://wa.me/5544991551068" // Ajustado para o seu número real
+            href="https://wa.me/5544991268348" // Ajustado para o seu número real
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-3 rounded text-xs font-bold uppercase tracking-wider bg-blue-900 text-white hover:bg-blue-800 transition-all shadow-sm"
@@ -100,7 +100,7 @@ const Header = ({ scrolled: _scrolledProps }: HeaderProps) => {
             </a>
           ))}
           <a 
-            href="https://wa.me/5544991551068" 
+            href="https://wa.me/5544991268348" 
             target="_blank"
             className="bg-blue-900 text-white text-center py-4 px-8 rounded font-bold mt-6 w-full"
             onClick={() => setIsMenuOpen(false)}
