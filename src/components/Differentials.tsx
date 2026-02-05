@@ -1,7 +1,5 @@
 
-import React from 'react';
-
-const DifferentialItem: React.FC<{ title: string; subtitle: string }> = ({ title, subtitle }) => (
+const _DifferentialItem: React.FC<{ title: string; subtitle: string }> = ({ title, subtitle }) => (
   <div className="flex items-start space-x-4">
     <div className="mt-1">
       <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">

@@ -1,6 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'; // Importação necessária para o funcionamento
 
-const Header = () => {
+// Esta parte abaixo resolve o erro "Property 'scrolled' does not exist" que deu no deploy
+interface HeaderProps {
+  scrolled?: boolean;
+}
+
+const Header = ({ scrolled: _scrolledProps }: HeaderProps) => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -30,15 +35,13 @@ const Header = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         
-        {/* --- ÁREA DO LOGO (AGORA SÓ IMAGEM) --- */}
+        {/* --- ÁREA DO LOGO --- */}
         <a href="#" className="flex items-center">
           <img 
             src="/img/logo.png" 
             alt="Hoegen Pharma" 
-            // Aumentei de h-12 para h-16 para dar mais destaque
             className="h-16 w-auto object-contain py-1" 
           />
-          {/* O texto escrito "HOEGEN PHARMA" foi removido daqui */}
         </a>
 
         {/* NAVEGAÇÃO DESKTOP */}
@@ -53,7 +56,7 @@ const Header = () => {
             </a>
           ))}
           <a 
-            href="https://wa.me/554491268348" 
+            href="https://wa.me/5544991551068" // Ajustado para o seu número real
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-3 rounded text-xs font-bold uppercase tracking-wider bg-blue-900 text-white hover:bg-blue-800 transition-all shadow-sm"
@@ -97,7 +100,7 @@ const Header = () => {
             </a>
           ))}
           <a 
-            href="https://wa.me/554491268348" 
+            href="https://wa.me/5544991551068" 
             target="_blank"
             className="bg-blue-900 text-white text-center py-4 px-8 rounded font-bold mt-6 w-full"
             onClick={() => setIsMenuOpen(false)}
